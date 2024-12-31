@@ -1,0 +1,28 @@
+<!-- this is the actual controller that controls the data in app.js -->
+<div class = "content">
+    <button ng-click = "order = ('name')">Order by Name</button>
+    <button ng-click = "order = ('color')">Order by Color</button>
+    <input type="text" ng-model = "search" placeholder = " Search for the City"/>
+    <ul id = "city-list">
+        <!-- orderBy is the filter that is applied to city names  -->
+        <!-- ng-show is used to show the specific values only be it true or false, ng-hide is used to hide the specific values -->
+        <li ng-repeat = "city in cities | orderBy : order | filter : search" >
+            <img ng-src = "{{city.image}}" style = "margin: -12px 10px 0 0; float: left; width: 50px"
+                ng-show = "city.image" />
+            <!-- this ng-show will show the new entries without image errors -->
+            <h3>{{city.name}} - {{city.rate | currency: 'Rs. '}}</h3>
+            <div class = "remove" ng-click = "removeCity(city)">X</div>
+            <span class = "color" ng-style = "{'background': city.color}">{{city.color}} color</span>
+        </li>
+    </ul>
+    <form ng-submit = "addCity()"> 
+        <input type = "text" placeholder = "name" ng-model = "newCity.name" />
+        <input type = "text" placeholder = "food" ng-model = "newCity.food" />
+        <input type = "text" placeholder = "historicalPlace" ng-model = "newCity.historicalPlace" />
+        <input type = "text" placeholder = "rate" ng-model = "newCity.rate" />
+        <input type = "text" placeholder = "affordable" ng-model = "newCity.affordable" />
+        <input type = "text" placeholder = "color" ng-model = "newCity.color" />
+        <input type = "submit" value = "Add new city name" />
+    </form>
+    <a href = "" ng-click = "removeAll()">Remove all the cities</a>
+</div>

@@ -1,0 +1,29 @@
+[
+    {
+        "name" : "Pune",
+        "food" : "Pani-Puri",
+        "historicalPlace" : "Shaniwar Wada",
+        "rate" : 10,
+        "affordable": true,
+        "color": "pink",
+        "image": "content/image/Pune.jpg"
+    },
+    {
+        "name" : "Mumbai",
+        "food" : "Vadapav",
+        "historicalPlace" : "Gate of India",
+        "rate" : 9.5,
+        "affordable": true,
+        "color": "blue",
+        "image": "content/image/mumbai.jpg"
+    },
+    {
+        "name" : "Bangalore",
+        "food" : "Dosa",
+        "historicalPlace" : "Ramoji Film City",
+        "rate" : 10,
+        "affordable": false,
+        "color": "yellow",
+        "image": "content/image/banglore.jpg"
+    }
+]
